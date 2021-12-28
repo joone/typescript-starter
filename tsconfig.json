@@ -1,11 +1,14 @@
 {
   "compilerOptions": {
+    "strictPropertyInitialization": false,
     "target": "es6",
     "module": "commonjs",
     "outDir": "dist",
     "sourceMap": true,
     "strict": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
   },
   "files": ["./node_modules/@types/node/index.d.ts"],
   "include": ["src/**/*.ts"],
