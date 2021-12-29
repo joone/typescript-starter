@@ -1,7 +1,8 @@
 import * as express from "express";
 import * as postAPI from "./api";
+import {UserController} from "./controller/UserController";
 
-class App {
+export class App {
   public express: any;
 
   constructor() {
@@ -11,6 +12,7 @@ class App {
   }
 
   private mountRoutes(): void {
+    const userController = new UserController
     const router = express.Router();
     router.get("/", (req, res) => {
       res.json({
@@ -32,8 +34,11 @@ class App {
       }
     );
 
+    // User
+    router.get("/user/:id", async (req, res) => {
+      res.json(await userController.one(req, res));
+    });
+
     this.express.use("/", router);
   }
 }
-
-export default new App().express;
