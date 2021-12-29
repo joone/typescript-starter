@@ -1,4 +1,6 @@
 import * as express from "express";
+import { json } from "body-parser";
+
 import * as postAPI from "./api";
 import {UserController} from "./controller/UserController";
 
@@ -7,7 +9,8 @@ export class App {
 
   constructor() {
     this.express = express();
-    this.express.use(express.json());
+    //this.express.use(express.json());
+    this.express.use(json({ type: "application/json" }));
     this.mountRoutes();
   }
 
@@ -37,6 +40,10 @@ export class App {
     // User
     router.get("/user/:id", async (req, res) => {
       res.json(await userController.one(req, res));
+    });
+
+    router.post("/user", async (req, res) => {
+      res.json(await userController.save(req, res));
     });
 
     // Users
