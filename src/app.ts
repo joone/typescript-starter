@@ -2,7 +2,7 @@ import * as express from "express";
 import { json } from "body-parser";
 
 import * as postAPI from "./api";
-import {UserController} from "./controller/UserController";
+import { UserController } from "./controller/UserController";
 
 export class App {
   public express: any;
@@ -15,7 +15,7 @@ export class App {
   }
 
   private mountRoutes(): void {
-    const userController = new UserController
+    const userController = new UserController();
     const router = express.Router();
     router.get("/", (req, res) => {
       res.json({

@@ -8,7 +8,7 @@
     "strict": true,
     "resolveJsonModule": true,
     "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
+    "experimentalDecorators": true
   },
   "files": ["./node_modules/@types/node/index.d.ts"],
   "include": ["src/**/*.ts"],

@@ -1,8 +1,8 @@
 {
-    "type": "mongodb",
-    "host": "localhost",
-    "database": "test",
-    "entities": ["dist/entity/*.js"],
-    "logging": true,
-    "synchronize": true
-  }
+  "type": "mongodb",
+  "host": "localhost",
+  "database": "test",
+  "entities": ["dist/entity/*.js"],
+  "logging": true,
+  "synchronize": true
+}
