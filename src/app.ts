@@ -39,6 +39,11 @@ export class App {
       res.json(await userController.one(req, res));
     });
 
+    // Users
+    router.get("/users", async (req, res) => {
+      res.json(await userController.all(req, res));
+    });
+
     this.express.use("/", router);
   }
 }
