@@ -1,4 +1,4 @@
-# typescript-template
+# typescript-starter
 
 This repository is a TypeScript template that includes the following features:
 - Express.js
