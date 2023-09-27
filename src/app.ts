@@ -6,6 +6,7 @@ class App {
 
   constructor() {
     this.express = express();
+    this.express.use(express.json());
     this.mountRoutes();
   }
 
@@ -19,6 +20,17 @@ class App {
     router.get("/posts", (req, res) => {
       res.json(postAPI.getPost());
     });
+
+    router.post('/write', ( req, res) => {
+        console.log(req.body);
+         try {
+          res.json({message: "ok"});
+        } catch (error) {
+          console.log(error);
+          res.json({message: "error"});
+        }
+      }
+    );
 
     this.express.use("/", router);
   }
