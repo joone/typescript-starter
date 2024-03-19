@@ -29,6 +29,6 @@
     "@types/yargs": "^17.0.4",
     "express": "^4.17.1",
     "mongodb": "^5.9.2",
-    "reflect-metadata": "^0.1.13"
+    "reflect-metadata": "^0.2.1"
   }
 }
