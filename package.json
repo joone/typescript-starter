@@ -28,7 +28,7 @@
   "dependencies": {
     "@types/yargs": "^17.0.4",
     "express": "^4.17.1",
-    "mongodb": "^3.7.3",
+    "mongodb": "^6.5.0",
     "reflect-metadata": "^0.1.13",
     "typeorm": "^0.2.45"
   }
