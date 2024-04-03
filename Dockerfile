@@ -7,4 +7,4 @@ COPY ./package.json /package.json
 COPY ./package-lock.json /package-lock.json
 
 RUN NODE_ENV=$NODE_ENV npm install
-CMD ["node", "dist/index.js"]
+CMD ["node", "dist/index.js server"]
